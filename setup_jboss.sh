@@ -45,6 +45,6 @@ chown -R vagrant:vagrant $JBOSS_HOME
 last_ip=`echo "${SERVER_IP: -2}"`
 node_name="node$last_ip"
 
-CLUTER_BROADCAST="203.0.0.4"
+CLUTER_BROADCAST="230.0.0.4"
 # Start JBoss
-$JBOSS_HOME/bin/standalone.sh -c standalone-ha.xml -b 0.0.0.0 -c $CLUSTER_BROADCAST --Djboss.node.name=$node_name
+$JBOSS_HOME/bin/standalone.sh -c standalone-ha.xml -b 0.0.0.0 -Djboss.node.name=$node_name -u $CLUSTER_BROADCAST
