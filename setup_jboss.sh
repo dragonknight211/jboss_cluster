@@ -40,6 +40,8 @@ cd $JBOSS_HOME
 # Copy clusterwebapp to deployments
 cp $CUR_DIR/ClusterWebApp.war $JBOSS_HOME/standalone/deployments/
 
+chown -R vagrant:vagrant $JBOSS_HOME/standalone/deployments/*
+
 last_ip=`echo "${SERVER_IP: -2}"`
 node_name="node$last_ip"
 
