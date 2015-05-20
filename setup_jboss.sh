@@ -47,4 +47,4 @@ node_name="node$last_ip"
 
 CLUTER_BROADCAST="230.0.0.4"
 # Start JBoss
-$JBOSS_HOME/bin/standalone.sh -c standalone-ha.xml -b 0.0.0.0 -Djboss.node.name=$node_name -u $CLUSTER_BROADCAST
+$JBOSS_HOME/bin/standalone.sh -c standalone-ha.xml -b 0.0.0.0 -Djboss.node.name=$node_name -u $CLUTER_BROADCAST
